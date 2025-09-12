@@ -2,7 +2,8 @@
 
 PantryChef is a web application that helps you discover recipes based on the ingredients you have at home. Simply enter your available ingredients, and PantryChef will suggest recipes tailored to your pantry. No more last-minute grocery store runs or wasting food!
 
-Live Demo: [PantryChef]([https://soft-nasturtium-971b16.netlify.app/](https://soft-nasturtium-971b16.netlify.app/)
+**Live Demo:** [PantryChef](https://soft-nasturtium-971b16.netlify.app/)
+
 
 ---
 
