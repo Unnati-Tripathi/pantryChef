@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// Firebase Imports
 import { initializeApp } from 'firebase/app';
 import {
     getAuth,
@@ -30,12 +29,10 @@ const firebaseConfig = {
 };
 
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// --- Illustration Component ---
 function KitchenIllustration() {
   return (
     <div className="relative w-full max-w-lg mx-auto mt-2 text-center">
@@ -81,9 +78,8 @@ function KitchenIllustration() {
 }
 
 
-// --- Main App Component ---
 function App() {
-    const [page, setPage] = useState('home'); // home, recipe, favorites, login
+    const [page, setPage] = useState('home'); 
     const [selectedRecipeId, setSelectedRecipeId] = useState(null);
     const [currentUser, setCurrentUser] = useState(null);
     const [loadingAuth, setLoadingAuth] = useState(true);
@@ -127,7 +123,6 @@ function App() {
     );
 }
 
-// --- Components ---
 
 function Navbar({ navigateTo, currentUser }) {
     const handleSignOut = () => {
@@ -158,8 +153,6 @@ function HomePage({ navigateTo }) {
     const [recipes, setRecipes] = useState([]);
     const [status, setStatus] = useState('idle');
 
-    // NOTE: For development, use localhost. For deployment, use your live backend URL.
-    // const API_BASE_URL = 'http://localhost:3001';
     const API_BASE_URL = import.meta.env.VITE_API_BASE;
 
 
